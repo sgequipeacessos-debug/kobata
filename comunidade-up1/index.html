@@ -39,13 +39,6 @@
     .video-title { font-family: "Roboto", sans-serif; font-size: 26px; font-weight: 700; line-height: 1.4; max-width: 520px; margin: 0 auto; }
     .video-wrap { width: 330px; max-width: 100%; margin: 41px auto 0; }
 
-    /* Botão de 1 clique da Kiwify: aparece no pitch */
-    #pitch { display: block; width: 400px; max-width: 100%; margin: 28px auto 0; padding: 0 10px; text-align: center; }
-    #pitch button { cursor: pointer; }
-    #pitch div[id^="kiwify-upsell-cancel"] { cursor: pointer; margin-top: 14px; }
-    #pitch .kiwify-upsell-inline-label { color: #d4d4d8 !important; }
-    #pitch div[id^="kiwify-upsell-cancel"] { color: #a1a1aa !important; }
-
     /* Rodapé */
     footer { padding: 60px 10px 50px; text-align: center; }
     footer .rule { width: 552px; max-width: 100%; margin: 0 auto; border-bottom: 1px solid #a3bac6; }
@@ -75,12 +68,6 @@
     </div>
   </div>
 
-  <div id="pitch">
-    <div id="kiwify-upsell-5fiScnT" data-upsell-url="https://influenciadoroculto.com.br/obrigado/" data-downsell-url="https://influenciadoroculto.com.br/obrigado/" style="--kiwify-upsell-accept-bg:#2ECC70;--kiwify-upsell-accept-color:#FFFFFF">
-      <button id="kiwify-upsell-trigger-5fiScnT">Sim, eu quero estar na Comunidade!</button>
-      <div id="kiwify-upsell-cancel-trigger-5fiScnT">Não, prefiro ficar de fora da Comunidade</div>
-    </div><script src="https://snippets.kiwify.com/upsell-v2/upsell.min.js"></script>
-  </div>
 
   <footer>
     <div class="rule"></div>
@@ -90,15 +77,5 @@
     </div>
   </footer>
 
-  <script>
-    // Botões visíveis o tempo todo (para voltar ao pitch: display none no CSS e 511 aqui)
-    var delaySeconds = 0;
-    var player = document.querySelector("vturb-smartplayer");
-    if (player) {
-      player.addEventListener("player:ready", function () {
-        player.displayHiddenElements(delaySeconds, ["#pitch"], { persist: true });
-      });
-    }
-  </script>
 </body>
 </html>
